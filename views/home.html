@@ -1,0 +1,164 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<div ng-controller="controller_blog" class="wrapper">
+
+	<div class="background_img_container">
+		<header class="header_wrapper" >
+			<div class="header_left_block">
+				<a href="#/"><img class="logo_header" src="../pictures/logobowery-blue.png"></img></a>
+				<a href="#/"><div class="logo_title">Deepsight</div> </a>
+			</div>
+		</header>
+
+		<h1 class="title_home">LEVERAGE YOUR DATA WITH AI</h1>
+		<h2 class="subtitle_home">Get customized deep learning solutions to solve your business needs</h2>
+		<a href="mailto:contact@deepsight.io"><div class="CTA_main_block" mail><p class="CTA_copy">REQUEST A DEMO</p></div></a>
+	</div>
+
+
+	<div class="value_proposition">
+		<p class="title_value_proposition">AI-powered solutions</p>
+		<p class="subtitle_value_proposition">Deepsight builds artificial intelligence tools to help companies make the best out of their data.</p>
+		<div class="proposition_wrapper">
+				<div class="proposition">
+					<img class="logo_proposition"src="../photos/graphlogo.png">
+					<div class="text_wrapper_proposition">
+						<p class="title_proposition">Preprocessing and feature extraction</p>
+						<p class="subtitle_proposition">You have an outstanding amount of unstructured data. We process and extract relevant features to focus on what really matters for your activities.</p>				
+					</div>
+				</div>
+	
+				<div class="proposition">
+					<img class="logo_proposition"src="../photos/earthlogo.png">
+					<div class="text_wrapper_proposition">
+						<p class="title_proposition">Machine learning implementation</p>
+						<p class="subtitle_proposition">We use state of the art machine learning algorithm based on scientific research to tackle your real-world problems</p>				
+					</div>
+				</div>
+	
+				<div class="proposition">
+					<img class="logo_proposition"src="../photos/constellationlogo.png">
+					<div class="text_wrapper_proposition">
+						<p class="title_proposition">A sustainable solution</p>
+						<p class="subtitle_proposition">Once set up, ouralgorithm helps you on the day to day operations and continuously  add value to your business. Let the magic operate.</p>				
+					</div>
+				</div>
+		</div>
+	</div>
+
+
+
+	<div class="case_studies_block" ng-model="use_case_displayed">
+		<div class="our_case_studies">
+			<div class="title_wrapper_our_case_studies">
+				<h2 class="title_our_case_studies">OUR CASE STUDIES</h2>
+			</div>
+			<div class="subtitle_wrapper_our_case_studies">
+				<div class="subtitle_column_our_case_studies" ng-click="use_case_to_display(case.id)" ng-repeat="case in all_case_studies"><h3 class="subtitle_our_case_studies">{{case.prevtitle}}</h3></div>
+			</div>
+		</div>
+
+		<div class="case_studies" id="introduction_case_studies">
+			<h3 class="title_case_studies">{{use_case_displayed.title}}</h3>
+			<h4 class="subtitle_case_studies">{{use_case_displayed.subtitle}}</h4>
+		</div>
+
+		<div class="case_studies" id="mobile_case_studies" ng-repeat="case in all_case_studies">
+			<h3 class="title_case_studies">{{case.title}}</h3>
+			<h4 class="subtitle_case_studies">{{case.subtitle}}</h4>
+		</div>
+
+
+		<div class="element_wrapper_case_studies">
+			<div class="element_case_studies">
+				<img class="logo_element_case_studies" src="../photos/calpin.png">
+				<div class="text_wrapper_element_case_studies">
+					<p class="title_element_case_studies">{{use_case_displayed.title_problem}}</p>
+					<p class="subtitle_element_case_studies">{{use_case_displayed.content_problem}}</p>				
+				</div>
+			</div>
+
+			<div class="element_case_studies">
+				<img class="logo_element_case_studies" src="../photos/glasses.png">
+				<div class="text_wrapper_element_case_studies">
+					<p class="title_element_case_studies">{{use_case_displayed.title_solution}}</p>
+					<p class="subtitle_element_case_studies">{{use_case_displayed.content_solution}}</p>				
+				</div>
+			</div>
+			<div class="element_case_studies">
+				<img class="logo_element_case_studies" src="../photos/eye.png">
+				<div class="text_wrapper_element_case_studies">
+					<p class="title_element_case_studies">{{use_case_displayed.title_illustration}}</p>
+					<p class="subtitle_element_case_studies">{{use_case_displayed.path_illustration}}</p>				
+				</div>
+			</div>
+
+			<div class="element_case_studies">
+				<img class="logo_element_case_studies" src="../photos/gear.png">
+				<div class="text_wrapper_element_case_studies">
+					<p class="title_element_case_studies">{{use_case_displayed.title_technology}}</p>
+					<div class="wrapper_tech_tree">
+						<img class="logo_tech_tree" src="../photos/techtree.png">
+						<div id="tech-1"><p>{{use_case_displayed.techno_1_technology}}</p></div>
+						<div id="tech-2"><p>{{use_case_displayed.techno_2_technology}}</p></div>
+						<div id="tech-3"><p>{{use_case_displayed.techno_3_technology}}</p></div>
+					</div>
+					<p class="built_with">Built with</p>
+					<div class="logo_wrapper_built_with">
+						<img class="logo_built_with" src="{{use_case_displayed.language_1_technology}}">
+						<img class="logo_built_with" src="{{use_case_displayed.language_2_technology}}">
+						<img class="logo_built_with" src="{{use_case_displayed.language_3_technology}}">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="testimony_block">
+		<div class="quote_wrapper">
+			<div class="quote_block">
+				<p class="quote">"Thanks to Deepsight I no longer have to count product on the shelves, it is done automatically !"</p>
+				<p class="quote_people">Fabrice Haiat, CEO of Yoobic</p>
+			</div>
+			<div class="quote_block">
+				<p class="quote">"Together with Deepsight, we have implemented a new pricing algorithm. I have seen my turnover raised by 13% !"</p>
+				<p class="quote_people">Guillaume Durant, CTO of Pinpo</p>
+			</div>			
+		</div>
+		
+	</div>
+
+
+	<div class="team_block">
+		<h1 class="title_team_block">Our team<h1>
+		<p class="description_team_block">We are four engineers passionate about data. We want to turn complex algorithms into powerful business tools</p>
+		<div class="team_member_wrapper">
+			<div class="team_member" ng-repeat="Member in team_member">
+				<div class="picture_wrapper_team_member">
+					<img class="picture_team_member" src="{{Member.path}}"></a>
+					<a href="{{Member.link}}" target="_blank"><img class="social_link_team_member" src="../photos/linkedinlogodark.png"></a>		
+				</div>
+				<div class="team_member_information">
+					<div class="name_role_wrapper">
+						<p class="name_team_member">{{Member.name}}</p>
+						<p class="role_team_member">, {{Member.role}}</p>
+						<p class="education_team_member">{{Member.education}}</p>
+						<p class="description_member">{{Member.description}}</p>					
+					</div>
+				</div>
+			</div>
+		</div>
+		<h1 class="title_jump_in_the_bangwagon">Have a specific demand/ Need a custom algorithm ?</h1>
+		<h2 class="subtitle_jump_in_the_bangwagon">Let AI empower your business</h2>
+		<a href="mailto:contact@deepsight.io" class="contact_us_bangwagon"><div class="CTA_jump_in_the_bangwagon" mail><p class="CTA_copy_jump_in_the_bangwagon">CONTACT US</p></div></a>
+	</div>
+
+
+	<footer class="footer_block">
+		<img class="logo_footer" src="../pictures/logobowery-blue.png">
+		<p class="title_footer">Deepsight</p>
+		<a href="mailto:contact@deepsight.io" class="contact_us_bangwagon"><p class="contact_us_footer">Contact Us</p></a>
+		<p class="enterprise_footer">Copyright 2016 - SAS Deepsight Technologies</p>
+	</footer>
+
+</div>
